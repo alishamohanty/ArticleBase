@@ -24,6 +24,20 @@ module.exports = {
     add: function(req,res)
     {
       res.view('pages/add');
+    },
+    create:function (req,res,next)
+    {
+         var title=req.body.title;
+         var body=req.body.body;
+         var article={title:title,body:body};
+         Articles.create(article).exec(function(err, article)
+        {
+            if(err)
+            {
+                next(err);
+            }
+            res.redirect('/articles/list');
+        });
     }
 
 };
