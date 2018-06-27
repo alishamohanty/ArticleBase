@@ -38,7 +38,9 @@ module.exports.routes = {
   * not match any of those, it is matched against static assets.             *
   *                                                                          *
   ***************************************************************************/
-
+  'GET /articles/list': 'ArticlesController.list',
+  'GET /articles/add':  'ArticlesController.add',
+  'POST /article/create': 'Articles.create',
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
