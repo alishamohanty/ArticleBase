@@ -55,7 +55,7 @@ module.exports = {
     },
     edit: function(req,res,next)
     {
-        console.log('Inside delete method');
+        console.log('Inside edit method');
         Articles.findOne({id:req.params.id}).exec(function(err,article)
         { 
             if(err)
