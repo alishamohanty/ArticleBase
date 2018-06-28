@@ -40,8 +40,11 @@ module.exports.routes = {
   ***************************************************************************/
   'GET /articles/list': 'ArticlesController.list',
   'GET /articles/add':  'ArticlesController.add',
-  'POST /article/create': 'Articles.create',
-
+  'POST /articles/create': 'ArticlesController.create',
+  'POST /articles/delete/:id?' : 'ArticlesController.destroy',
+  'GET /articles/update/:id?': 'ArticlesController.edit',
+  'POST /articles/update/:id?': 'ArticlesController.update'
+  
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
