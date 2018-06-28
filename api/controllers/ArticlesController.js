@@ -65,7 +65,7 @@ module.exports = {
             res.view('pages/edit',{article:article});
         });
     },
-    update: function(req,res)
+    update: function(req,res,next)
     {
         console.log('Inside update method');
         var title=req.body.title;
@@ -79,7 +79,15 @@ module.exports = {
             }
             res.redirect('/articles/list');
         });
-    }
+    },
+    view: function(req,res,next)
+    {
+        console.log('Inside view Method');
+        Articles.findOne({id:req.params.id}).exec(function(err,article)
+        {
+           res.view('pages/view',{article:article});
+        });
+    } 
 
 };
 

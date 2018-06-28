@@ -43,7 +43,8 @@ module.exports.routes = {
   'POST /articles/create': 'ArticlesController.create',
   'POST /articles/delete/:id?' : 'ArticlesController.destroy',
   'GET /articles/update/:id?': 'ArticlesController.edit',
-  'POST /articles/update/:id?': 'ArticlesController.update'
+  'POST /articles/update/:id?': 'ArticlesController.update',
+  'GET /articles/view/:id?': 'ArticlesController.view'
   
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
